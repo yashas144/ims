@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <link rel="stylesheet" href="css\bootstrap.css"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+  <link href="https://fonts.googleapis.com/css?family=Krona+One" rel="stylesheet">
+  <link rel="stylesheet" href="http://localhost:8080/inviligate/style2.css">
+  <link rel="stylesheet" href="http://localhost:8080/inviligate/style3.css">
+  <link rel="stylesheet" href="http://localhost:8080/inviligate/drawerStyle.css">
+
+  <title>Add Room</title>
+
+<nav class="navbar navbar-dark bg-dark" style = "">
+  <a class="navbar-brand" href="http://www.abes.ac.in/">
+    <img src="http://localhost:8080/inviligate/ABES ICON.jpg" width="60" height="30" class="d-inline-block align-top " alt="">
+    <p style = "display:inline"class="p">ABES Engineering College</p>
+  </a>
+</nav>
+
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="insertdetails.html">Home</a>
+  <a href="addfaculty.jsp">Add Faculty</a>
+  <a href="deletefaculty.html">Delete Faculty</a>
+  <a href="addroom.html">Add Room</a>
+  <a href="deleteroom.html">Delete Room</a>
+  <a href="leaveApplication.html">Application Leave</a>
+  <a href="rosterinfo.jsp">Generate Roaster</a>
+  <a href="deleterostertables.jsp">Delete Roaster</a>
+  <p style="background-color:green">Allocate Duties</p>
+  <a href="logout.jsp">LogOut</a>
+</div>
+
+<div>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("card").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("card").style.marginLeft= "auto";
+    document.body.style.backgroundColor = "white";
+}
+</script>
+
+<div class = "container">
+<FORM  NAME="login" class="login-form col-md-4 offset-md-4" action="http://localhost:8080/inviligate/allocate.jsp">
+		<h1 class="hero" style="text-align:center">Enter Details</h1>
+		<div class= "form-group">	
+			<label for="room"><br>Day of exam</label>
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+				</div>
+				<input type="number" class="form-control" name="days" id="validationTooltipUsername" placeholder="RoomNo." aria-describedby="validationTooltipUsernamePrepend" required>
+				<div class="invalid-tooltip">
+					Please choose valid day.
+				</div>
+			</div>   
+	   </div>
+	   
+	   <div class= "form-group">	
+			<label for="room">Shift</label>
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+				</div>
+				<input type="number" class="form-control" name="shifts" id="validationTooltipUsername" placeholder="RoomNo." aria-describedby="validationTooltipUsernamePrepend" required>
+				<div class="invalid-tooltip">
+					Please choose valid shift.
+				</div>
+			</div>   
+	   </div>
+	   
+	   <button class = "btn btn-primary btn-block" TYPE="SUBMIT"  >Submit</button>
+		<button class = "btn btn-primary btn-block"  TYPE="RESET" VALUE="RESET" >Reset</button>
+	   <br>
+</FORM>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</html>
